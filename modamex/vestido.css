@@ -1,0 +1,469 @@
+/* Configuración global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'ManteyLight';
+    src: url('fonts/ManteyExtraLight-BLGpn.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Navbar */
+.nav_bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease; 
+}
+
+/* Cambio de color en la barra de navegación al pasar el mouse*/
+.nav_bar:hover {
+    background-color: #f4f4f4;
+}
+
+/* Icono del menú con animación en el hover */
+.menuIcon {
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menuIcon:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Contenedor del logo */
+.contenedorLogo {
+    flex: 1;
+    text-align: center;
+}
+
+.logo {
+    height: 3rem;
+}
+
+/* Contenedo de búsqueda */
+.contenedorSearch {
+    position: relative;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo del input de búsqueda */
+.searchInput {
+    padding: 0.5rem 1rem;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 30px;
+    border: 2px solid #d1d1d1;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Placeholder dentro del campo de búsqueda */
+.searchInput::placeholder {
+    color: #888;
+}
+
+.searchInput:focus {
+    border-color: #ffa024;
+    background-color: #fff;
+}
+
+/* Icono de búsqueda con efecto de escala al hacer hover */
+.iconoBuscador {
+    right: 1rem;
+    height: 1.5rem;
+    top: 50%;
+    transform: translateY(30%);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.iconoBuscador:hover {
+    transform: scale(1.2); /* Aumento en el hover */
+}
+
+/* Iconos a la derecha en la barra de navegación */
+.iconosDerecha {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+/* Estilo para los iconos en la barra de navegación */
+.icono {
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icono:hover {
+    transform: scale(1.1); /* Efecto al pasar el cursor */
+}
+/*fin del navbaaaaaaaaaaaaaaaaaaaaaar*/
+
+/* Espacio extra para el contenido */
+body {
+    margin-top: 60px;
+    font-size: 1rem;
+    font-family: ManteyLight;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.cuerpo {
+    display: grid;
+    grid-template-columns: 2% 57% 5% 35% 1%;
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+}
+
+/* Contenedor de imágenes */
+.imagenes_vestido {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 60px;
+    justify-content: start;
+    align-items: start;
+}
+
+.img_1,
+.img_2 {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+.img_1 .contenedorImagen img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; 
+}
+.img_2 .contenedorImagen img {
+    width: 93%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; 
+}
+
+label {
+    display: block; 
+    margin-bottom: 3dvh; 
+}
+
+.textos {
+    border-radius: 2dvw;
+    background-color: #d1d1d1;
+    color: #fff;
+    padding: 1dvh 2dvw 1dvh;
+    font-family: ManteyLight;
+    width: 30dvw;
+
+}
+
+.contenedorTexto {
+    flex: 1 1 25dvw;
+    text-align: center;
+    display: block; 
+    margin-bottom: 3dvh; 
+
+}
+
+.contenedorTexto .nombre {
+    font-size: 2.5dvw;
+    font-weight: bold;
+    color: #333;
+}
+
+.contenedorTexto .descripcion {
+    font-size: 1.3dvw;
+    color: #333;
+}
+
+.contenedorTexto .precio {
+    font-size: 2dvw;
+    color: #333;
+}
+
+.contenedorTexto .talla {
+    font-size: 1.8dvw;
+    color: #333;
+}
+
+.contenedorTexto .tallas,
+.contenedorTexto .anadir_carrito {
+    padding: 1dvh 2dvw;
+    font-size: 1dvw;
+    margin: 0.5dvh;
+    border-radius: 0.5dvw;
+}
+
+/* Sección de accesorios */
+.no_se_como_llamarlo {
+    font-family: ManteyLight;
+    text-align: center;
+    width: 100%;
+}
+
+.tittle {
+    font-size: 3rem; /* Texto más grande */
+    font-family: ManteyLight;
+}
+
+.jijijija {
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+}
+
+.contenedorImagen {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.jijijija .contenedorImagen img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Evita la distorsión */
+}
+/* Estilo para los botones de tallas*/
+.tallas {
+    background-color: rgb(2, 201, 168);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+/* Efecto al pasar el mouse sobre los botones de tallas*/
+.tallas:hover {
+    background-color: rgb(0, 167, 139);
+    transform: scale(1.05);
+}
+/* Efecto al presionar los botones tallas*/
+.tallas:active {
+    background-color: rgb(0, 124, 103);
+    transform: scale(1);
+}
+/* Efecto al enfocarse en los botones tallas*/
+.tallas:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgb(0, 255, 213);
+}
+
+.contenedorAñadir {
+    display: flex; /* Habilita flexbox */
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 1dvw; /* Espacio entre el ícono y el botón */
+    text-align: center;
+    margin-left: 4dvw;
+    margin-bottom: 2dvh;
+}
+
+.icono_cora {
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.icono_cora img{
+    height: 1.5dvh;
+    width: auto;
+}
+
+.icono_cora:hover {
+    transform: scale(1.1); /* Efecto al pasar el cursor */
+}
+
+.anadir_carrito {
+    background-color: rgb(255, 0, 119);
+    color: white;
+    padding: 1dvh 2dvw; /* Ajusta el padding proporcional al viewport */
+    font-size: 1.5dvw;
+    border: none;
+    border-radius: 0.5dvw;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: ManteyLight;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.anadir_carrito:hover {
+    background-color: rgb(202, 0, 94);
+    transform: scale(1.05);
+}
+
+/* Efecto al presionar el botón */
+.anadir_carrito:active {
+    background-color: rgb(148, 0, 69);
+    transform: scale(1);
+}
+
+/* Efecto al enfocarse en el botón */
+.anadir_carrito:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgb(248, 171, 203);
+}
+
+/* Estilo general del footer */
+.footer {
+    border-radius: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px 10px;
+    font-family: ManteyLight;
+}
+
+/* Contenedor principal del footer */
+.contenedorFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Información general en el footer */
+.infoModamex {
+    flex: 1 1 250px;
+    text-align: center;
+}
+
+/* Logo en la sección de información */
+.logoColibri {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+/* Estilo del texto en la sección de información */
+.infoModamex p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+/* Sección de contacto */
+.contactos {
+    flex: 1 1 250px;
+}
+
+.contactos h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contactos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contactos li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Sección de redes sociales */
+.redesSociales {
+    flex: 1 1 250px;
+}
+
+.redesSociales h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.logoRedes {
+    list-style: none;
+    padding: 0;
+}
+
+.logoRedes li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Iconos de redes sociales con transición al hacer hover */
+.logoRedes a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.logoRedes a img:hover {
+    transform: scale(1.2); /* Aumento al hacer hover */
+}
+
+/* Sección de los apartados de vestidos */
+.secciones {
+    flex: 1 1 250px;
+}
+
+.secciones h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.secciones ul {
+    list-style: none;
+    padding: 0;
+}
+
+.secciones li {
+    margin-bottom: 10px;
+}
+
+/* Estilo de los enlaces en los apartados */
+.secciones a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.secciones a:hover {
+    text-decoration: underline; /* Subrayado en el hover */
+}
+
+/* Derechos de autor */
+.derechos {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #555;
+    font-size: 14px;
+}

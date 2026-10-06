@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'ManteyLight';
+    src: url('fonts/ManteyExtraLight-BLGpn.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: ManteyLight; 
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    perspective: 1000px; /* Habilitar efecto 3D para transiciones */
+}
+
+/* Contenedor principal */
+.contenedor_general {
+    display: flex; /* Contenedor dividido en dos secciones */
+    width: 1000px;
+    height: 600px;
+    background-color: #fff; 
+    border-radius: 15px; 
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform-style: preserve-3d; /* Activar estilo 3D */
+    position: relative; /* Para posicionar elementos hijos */
+}
+
+/* === Animaciones === */
+/* Animación inicial del contenedor */
+.contenedor_general {
+    transform: rotateY(180deg); /* Rotación inicial para la entrada */
+    animation: flip-in 1s ease forwards; /* Animación de giro al cargar */
+}
+
+/* Animación personalizada para el giro inicial */
+@keyframes flip-in {
+    from {
+        transform: rotateY(360deg); /* Empieza con una rotación completa */
+    }
+    to {
+        transform: rotateY(0deg); /* Termina en la posición inicial */
+    }
+}
+
+/* Animación para cambio de página */
+.contenedor_general.rotado {
+    transform: rotateY(360deg); /* Rotación al cambiar de página */
+    transition: transform 1s ease; /* Suavizar la transición */
+}
+
+/* Estilos de la sección del formulario */
+.seccion_formulario {
+    flex: 1;
+    padding: 70px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+h2 {
+    font-size: 32px;
+    color: #333; 
+    margin-bottom: 30px; 
+    text-transform: uppercase; 
+    text-align: center; 
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; /* Separación entre los campos */
+}
+
+input {
+    font-family: ManteyLight; 
+    padding: 15px; 
+    font-size: 18px; 
+    border: 2px solid #ccc; 
+    border-radius: 10px;
+    outline: none; 
+    transition: border-color 0.3s ease; /* Transición suave al enfocar */
+}
+
+input:focus {
+    border-color: #000; /* Cambiar borde a negro al seleccionar */
+}
+
+/* Botón */
+button.btn {
+    padding: 15px; 
+    font-size: 20px; 
+    color: #fff; 
+    background-color: rgba(255, 0, 119);
+    font-family: ManteyLight;  
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer; /* Manita al pasar el mouse */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+}
+
+button.btn:hover {
+    background-color: rgba(138, 7, 68); /* Fondo negro al pasar el mouse */
+    transform: scale(1.1); /* Ampliar ligeramente */
+}
+
+/* Estilos para link de registrar */
+p {
+    margin-top: 20px;
+    font-size: 16px; 
+    color: #666; 
+    text-align: center; 
+}
+
+p a {
+    color: #000; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+p a:hover {
+    text-decoration: underline; /* Añadir subrayado al pasar el cursor */
+}
+
+
+/* Estilos de la sección del logo */
+.seccion_logo {
+    flex: 1; 
+    background-color:#9D3657;
+    position: relative; 
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrar logo */
+    text-align: center;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Animaciones suaves */
+}
+
+.logo img {
+    width: 250px; 
+    border: 5px solid rgba(255, 255, 255, 0.8); 
+    border-radius: 50%; /* Logo circular */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra alrededor del logo */
+    transition: transform 0.5s ease, filter 0.5s ease; /* Transicion ligera*/
+}
+
+.logo:hover img {
+    transform: scale(1.2) rotate(10deg); /* Ampliar y rotar ligeramente al pasar el cursor */
+    filter: brightness(1.2); /* Aumentar brillo */
+}
+
+/* Contenedor para la contraseña y el ojito */
+.contenedor_del_ojito {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#password {
+    flex: 1;
+    padding-right: 40px;
+}
+
+/* Estilo para el botón del ojito */
+.btn_ojito {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

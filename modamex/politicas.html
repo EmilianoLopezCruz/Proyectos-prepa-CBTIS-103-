@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Políticas de Privacidad y Términos - ModaMex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo general */
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nombreMarca {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #555;
+        }
+
+        .logo {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        /* Estilo de links generales */
+        a {
+            color: #3a6e50;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #22bd67;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #22bd67;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Estilo de botones de navegación */
+        .btnFlecha {
+            display: inline-block;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .btnFlecha:hover {
+            background: #22bd67;
+            color: white;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contenedor h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #3a6e50;
+        }
+
+        .contenedor h2 {
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem;
+            color: #555;
+        }
+
+        .contenedor p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .contenedor ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .contenedor ul li {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.5rem;
+            color: #333;
+        }
+
+        .contenedor ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #3aa064;
+        }
+
+        footer {
+            background-color: #fffef7;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #3a6e50;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footerSeparador {
+            height: 4px;
+            width: 80%;
+            background: linear-gradient(to right, #3aa064, #6ac989, #22bd67);
+            margin: 0 auto 1.5rem auto;
+            border-radius: 2px;
+        }
+
+        .footerTexto {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .contenedor {
+                padding: 1.5rem;
+            }
+
+            .contenedor h1 {
+                font-size: 1.8rem;
+            }
+
+            .contenedor h2 {
+                font-size: 1.3rem;
+            }
+
+            .contenedor p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.php" class="btnFlecha" title="Regresar">&larr;</a>
+        <div class="nombreMarca"> ModaMex</div>
+        <img src="Imagenes/logoColibri.png" alt="Logo de ModaMex" class="logo">
+    </header>
+    
+    <main>
+        <div class="contenedor">
+            <h1>Políticas de Privacidad y Términos de Uso</h1>
+            <p>
+                En <strong>ModaMex</strong>, la protección de su información y la claridad en nuestras condiciones son nuestras prioridades. Lea detenidamente los siguientes apartados para conocer más sobre cómo gestionamos sus datos y nuestras condiciones de uso.
+            </p>
+            
+            <h2>1. Información que recopilamos</h2>
+            <p>Recopilamos los siguientes datos personales:</p>
+            <ul>
+                <li>Nombre, correo electrónico y número de teléfono.</li>
+                <li>Detalles de pago y facturación para pedidos.</li>
+                <li>Datos técnicos como dirección IP y cookies para análisis.</li>
+            </ul>
+
+            <h2>2. Uso de su información</h2>
+            <p>La información se utiliza para:</p>
+            <ul>
+                <li>Procesar sus compras y brindar soporte técnico.</li>
+                <li>Ofrecerle una experiencia personalizada.</li>
+                <li>Enviar promociones y actualizaciones.</li>
+            </ul>
+
+            <h2>6. Contáctenos</h2>
+            <p>
+                Si tiene dudas, escríbanos a <a href="mailto:contacto@modamex.com">contacto@modamex.com</a>. Estamos aquí para ayudarle.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerSeparador"></div>
+        <p class="footerTexto">&copy; 2024 ModaMex. Elegancia y responsabilidad van de la mano.</p>
+    </footer>
+</body>
+</html>

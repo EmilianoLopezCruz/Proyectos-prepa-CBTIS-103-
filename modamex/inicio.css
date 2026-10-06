@@ -1,0 +1,521 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Asegura que padding y border no afecten el tamaño del elemento */
+}
+
+body{
+    padding: 20px;
+}
+/* fontsssss */
+@font-face {
+    font-family: 'CursivaFont';
+    src: url('fonts/FoodbukapersonalRegular-1jnmv.otf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'ManteyBold';
+    src: url('fonts/ManteyBold-lxdlq.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'ManteyLight';
+    src: url('fonts/ManteyExtraLight-BLGpn.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+/* fin de las fontsssss */
+
+/* Navbar */
+.nav_bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease; 
+}
+
+/* Cambio de color en la barra de navegación al pasar el mouse*/
+.nav_bar:hover {
+    background-color: #f4f4f4;
+}
+
+/* Icono del menú con animación en el hover */
+.menuIcon {
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menuIcon:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Contenedor del logo */
+.contenedorLogo {
+    flex: 1;
+    text-align: center;
+}
+
+.logo {
+    height: 3rem;
+}
+
+/* Contenedo de búsqueda */
+.contenedorSearch {
+    position: relative;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo del input de búsqueda */
+.searchInput {
+    padding: 0.5rem 1rem;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 30px;
+    border: 2px solid #d1d1d1;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Placeholder dentro del campo de búsqueda */
+.searchInput::placeholder {
+    color: #888;
+}
+
+.searchInput:focus {
+    border-color: #ffa024;
+    background-color: #fff;
+}
+
+/* Icono de búsqueda con efecto de escala al hacer hover */
+.iconoBuscador {
+    right: 1rem;
+    height: 1.5rem;
+    top: 50%;
+    transform: translateY(30%);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.iconoBuscador:hover {
+    transform: scale(1.2); /* Aumento en el hover */
+}
+
+/* Iconos a la derecha en la barra de navegación */
+.iconosDerecha {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+/* Estilo para los iconos en la barra de navegación */
+.icono {
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icono:hover {
+    transform: scale(1.1); /* Efecto al pasar el cursor */
+}
+/*fin del navbaaaaaaaaaaaaaaaaaaaaaar*/
+
+/* Contenedor principal del carrusel */
+.contenedorCarrusel {
+    width: 100%;
+    overflow: hidden;
+    background-color: #9D3657;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    position: relative;
+    border-radius: 50px;
+}
+
+/* Desplazamiento del texto en el carrusel */
+.textoCarrusel {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 30s linear infinite;
+}
+
+/* Que se mueve de derecha a izquierda */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(45%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* empieza el primer section */
+
+.Primer_Section {
+    background-image: url('Imagenes/banner.png'); /* Imagen de fondo */
+    background-size: cover; /* Imagen para cubrir todo */
+    background-position: center;
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.filtro_Imagen {
+    background-color: #9d3657cc; /* Color transparente */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+
+/* todo el segundo div */
+.contenido {
+    text-align: center; /* Centra el texto */
+    color: #333; 
+    font-family: ManteyLight; 
+    margin-top: 50px;
+    color: #fff;
+}
+
+/* Estilos de los textos */
+.bienvenida {
+    font-size: 25px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.titulo {
+    font-size: 90px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: rgb(255, 255, 255);
+    border: solid #ffffff;
+    font-family: ManteyBold;
+}
+
+.descripcion {
+    font-size: 30px;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+/* Botones */
+.botones {
+    margin-top: 20px;
+}
+
+.boton {
+    background-color: #b14e6e;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: ManteyLight;
+}
+
+.boton:hover {
+    background-color: #b2c921;
+}
+
+/* div de lucrash*/
+.no_se_como_llamarlo {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.texto {
+    font-size: 25px;
+    font-family: ManteyLight;
+    color: #353535;
+}
+
+.tittle {
+    font-size: 60px;
+    font-family: ManteyLight;
+}
+
+.jijijija {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+}
+
+.contenedor-imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaciado entre las imágenes */
+    width: 90%; /* Ancho del contenedor */
+    height: 500px;
+}
+
+.contenedor-imagenes img {
+    width: 28%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contenedor-imagenes img:hover {
+    cursor: pointer;
+}
+
+.jijijija input[type="button"] {
+    background-color: gray;
+    width: 60px;
+    height: 60px;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.jijijija input[type="button"]:hover {
+    background-color: #ffa024;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.jijijija input[type="button"]:active {
+    background-color: #e98f1a;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Segundo sectiooooooooooooooon*/
+
+.Segundo_Section {
+    background-image: url('Imagenes/banner2.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Imagen para cubrir todo */
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.filtro_Imagen2 {
+    background-color: #7d7ab5cc; /* Color transparente */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.tittle2{
+    font-size: 70px;
+    font-family: ManteyLight;
+}
+
+/* Tercer sectiooooooooooooooon*/
+
+.Tercer_Section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.tittle3 {
+    font-size: 70px;
+    font-family: ManteyLight;
+    margin-bottom: 30px;
+}
+
+.contenedorImagenes2 {
+    display: flex;
+    gap: 40px; /* Espaciado entre cada vestido */
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contenedorVestido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circulo {
+    width: 300px;
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 12px 12px 8px rgba(0, 0, 0, 0.2);
+}
+
+.textocategoria {
+    margin-top: 10px;
+    font-size: 25px;
+    text-align: center;
+    font-family: ManteyLight;
+    font-weight: bold;
+}
+
+
+/* Estilo general del footer */
+.footer {
+    border-radius: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px 10px;
+    font-family: ManteyLight;
+}
+
+/* Contenedor principal del footer */
+.contenedorFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Información general en el footer */
+.infoModamex {
+    flex: 1 1 250px;
+    text-align: center;
+}
+
+/* Logo en la sección de información */
+.logoColibri {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+/* Estilo del texto en la sección de información */
+.infoModamex p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+/* Sección de contacto */
+.contactos {
+    flex: 1 1 250px;
+}
+
+.contactos h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contactos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contactos li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Sección de redes sociales */
+.redesSociales {
+    flex: 1 1 250px;
+}
+
+.redesSociales h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.logoRedes {
+    list-style: none;
+    padding: 0;
+}
+
+.logoRedes li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Iconos de redes sociales con transición al hacer hover */
+.logoRedes a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.logoRedes a img:hover {
+    transform: scale(1.2); /* Aumento al hacer hover */
+}
+
+/* Sección de los apartados de vestidos */
+.secciones {
+    flex: 1 1 250px;
+}
+
+.secciones h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.secciones ul {
+    list-style: none;
+    padding: 0;
+}
+
+.secciones li {
+    margin-bottom: 10px;
+}
+
+/* Estilo de los enlaces en los apartados */
+.secciones a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.secciones a:hover {
+    text-decoration: underline; /* Subrayado en el hover */
+}
+
+/* Derechos de autor */
+.derechos {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #555;
+    font-size: 14px;
+}
